@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /aviso-legal.html
+Disallow: /privacidad.html
+Disallow: /terminos.html
+Disallow: /cookies.html
+
+Sitemap: https://bluedebug.com/sitemap.xml
