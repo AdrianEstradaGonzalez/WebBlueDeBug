@@ -13,8 +13,8 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://bluedebug.com">
     <title>BlueDeBug | Transformación Digital - Desarrollo Web y Apps en Gijón</title>
-    <link rel="icon" type="image/svg+xml" href="logo.svg">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+    <link rel="stylesheet" href="estilos/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="logo-container">
-                <img src="logo.svg" alt="BlueDeBug Logo" class="logo">
+                <img src="assets/logo.svg" alt="BlueDeBug Logo" class="logo">
                 <span class="logo-text">BlueDeBug</span>
             </div>
             <div class="menu-toggle" id="menuToggle">
@@ -50,7 +50,7 @@
                 <div class="hero-content">
                     <div class="hero-badges">
                         <span class="pill">Estrategia · Diseño · Ingeniería</span>
-                        <span class="pill soft">Entregas en ciclos cortos</span>
+                        <span class="pill">Entregas en ciclos cortos</span>
                     </div>
                     <h1 class="hero-title" data-aos="fade-up" data-aos-delay="50">
                         Transformamos<br> tus ideas en productos personalizados
@@ -193,9 +193,9 @@
             </div>
             
             <div class="portfolio-grid">
-                <div class="portfolio-card" data-aos="fade-up" data-aos-delay="100">
+                <a class="portfolio-card" data-aos="fade-up" data-aos-delay="100" href="https://play.google.com/store/apps/details?id=com.dreamleague" target="_blank" rel="noopener">
                     <div class="portfolio-image">
-                        <img src="dreamleague-logo.png" alt="DreamLeague App">
+                        <img src="assets/dreamleague-logo.png" alt="DreamLeague App">
                     </div>
                     <div class="portfolio-content">
                         <h3>DreamLeague</h3>
@@ -212,11 +212,11 @@
                             <span>API REST</span>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="portfolio-card" data-aos="fade-up" data-aos-delay="200">
+                <a class="portfolio-card" data-aos="fade-up" data-aos-delay="200" href="https://play.google.com/store/apps/details?id=com.alignme" target="_blank" rel="noopener">
                     <div class="portfolio-image">
-                        <img src="alignme-logo.png" alt="AlignMe App">
+                        <img src="assets/alignme-logo.png" alt="AlignMe App">
                     </div>
                     <div class="portfolio-content">
                         <h3>AlignMe</h3>
@@ -233,7 +233,28 @@
                             <span>Tiempo Real</span>
                         </div>
                     </div>
-                </div>
+                </a>
+
+                <a class="portfolio-card" data-aos="fade-up" data-aos-delay="300" href="https://autoref.netlify.app/" target="_blank" rel="noopener">
+                    <div class="portfolio-image">
+                        <img src="assets/autoref-logo.png" alt="AutoRef App">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>AutoRef</h3>
+                        <p class="portfolio-category">Aplicación de Gestión Deportiva • Plataforma Web Privada</p>
+                        <p class="portfolio-description">
+                            Sistema de gestión deportiva para la Federación de Voleibol del Principado de Asturias (FVBPA). 
+                            Automatiza la designación de árbitros a partidos, gestiona la disponibilidad de los árbitrafos 
+                            y envía notificaciones automáticas, optimizando la administración de competiciones.
+                        </p>
+                        <div class="portfolio-tags">
+                            <span>Plataforma Web</span>
+                            <span>Automatización</span>
+                            <span>Gestión</span>
+                            <span>Notificaciones</span>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -381,7 +402,7 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="logo-container">
-                        <img src="logo.svg" alt="BlueDeBug Logo" class="logo">
+                        <img src="assets/logo.svg" alt="BlueDeBug Logo" class="logo">
                         <span class="logo-text">BlueDeBug</span>
                     </div>
                     <p class="footer-description">
@@ -411,10 +432,10 @@
                     <div class="footer-column">
                         <h4>Legal</h4>
                         <ul>
-                            <li><a href="privacidad.html">Política de Privacidad</a></li>
-                            <li><a href="cookies.html">Política de Cookies</a></li>
-                            <li><a href="aviso-legal.html">Aviso Legal</a></li>
-                            <li><a href="terminos.html">Términos y Condiciones</a></li>
+                            <li><a href="vistas/privacidad.html">Política de Privacidad</a></li>
+                            <li><a href="vistas/cookies.html">Política de Cookies</a></li>
+                            <li><a href="vistas/aviso-legal.html">Aviso Legal</a></li>
+                            <li><a href="vistas/terminos.html">Términos y Condiciones</a></li>
                         </ul>
                     </div>
                 </div>

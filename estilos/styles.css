@@ -375,13 +375,26 @@ ul {
 
 .nav-link:hover,
 .nav-link.active {
-    color: var(--color-accent-hover);
-    background: rgba(33, 150, 243, 0.12);
+    /* Hover/active now show white + bold (same as selected) for better consistency */
+    color: var(--color-text);
+    background: transparent;
+    font-weight: 800;
+}
+
+/* Remove default focus outline for nav links and use bold to indicate focus */
+.nav-link:focus,
+.nav-link:focus-visible {
+    outline: none;
+    box-shadow: none;
+    background: transparent;
+    color: var(--color-text);
+    font-weight: 800;
 }
 
 .btn-contact {
-    background: linear-gradient(135deg, #2196F3 0%, #64B5F6 100%) !important;
-    color: #0B1029 !important;
+    /* Darker blue gradient for better contrast with white text */
+    background: linear-gradient(135deg, #0B72C9 0%, #0A66B8 100%) !important;
+    color: #FFFFFF !important;
     padding: var(--space-3) var(--space-5);
     border-radius: var(--radius-full);
     font-weight: 700;
@@ -391,7 +404,20 @@ ul {
 }
 
 .btn-contact:hover {
-    background: linear-gradient(135deg, #64B5F6 0%, #A5D8FF 100%) !important;
+    background: linear-gradient(135deg, #095fb0 0%, #084f9a 100%) !important;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
+}
+
+/* Ensure hero primary button uses the same darker gradient for contrast */
+.btn.btn-primary {
+    background: linear-gradient(135deg, #0B72C9 0%, #0A66B8 100%);
+    color: #FFFFFF;
+    box-shadow: var(--shadow-lg);
+}
+
+.btn.btn-primary:hover {
+    background: linear-gradient(135deg, #095fb0 0%, #084f9a 100%);
     transform: translateY(-2px);
     box-shadow: var(--shadow-xl);
 }
@@ -715,13 +741,14 @@ ul {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #2196F3 0%, #0EA5E9 100%);
-    color: #0B1029;
+    /* Match primary CTA to a slightly darker tone so white text reads clearly */
+    background: linear-gradient(135deg, #0B72C9 0%, #0A66B8 100%);
+    color: #FFFFFF;
     box-shadow: var(--shadow-lg);
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, #64B5F6 0%, #38BDF8 100%);
+    background: linear-gradient(135deg, #095fb0 0%, #084f9a 100%);
     transform: translateY(-2px);
     box-shadow: var(--shadow-xl);
 }
