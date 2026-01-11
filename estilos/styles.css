@@ -1232,6 +1232,22 @@ section {
     color: var(--color-text-tertiary);
 }
 
+.form-group select option {
+    background: var(--color-bg-secondary);
+    color: var(--color-text);
+    padding: var(--space-3);
+}
+
+.form-group select option:hover,
+.form-group select option:focus {
+    background: var(--color-accent);
+    color: white;
+}
+
+.form-group select option[value=""] {
+    color: var(--color-text-tertiary);
+}
+
 .contact-info {
     display: flex;
     flex-direction: column;
