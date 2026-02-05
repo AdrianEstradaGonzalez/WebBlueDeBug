@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="VBStats - App móvil para entrenadores de voleibol. Registra estadísticas de partidos, genera gráficas de rendimiento, seguimiento del progreso y comparte informes con tus jugadores.">
-    <meta name="keywords" content="VBStats, app voleibol, estadísticas voleibol, entrenador voleibol, app deportiva, análisis rendimiento, BlueDeBug">
+    <meta name="description" content="VBStats - App móvil para registrar y analizar estadísticas de voleibol. Gestiona equipos, captura acciones en tiempo real, consulta métricas detalladas y realiza seguimiento del progreso de tus jugadores.">
+    <meta name="keywords" content="VBStats, app voleibol, estadísticas voleibol, registro partidos, análisis rendimiento, recepción, ataque, bloqueo, saque, BlueDeBug">
     <meta name="author" content="BlueDeBug">
     <meta property="og:title" content="VBStats - App de Estadísticas de Voleibol | BlueDeBug">
-    <meta property="og:description" content="La app definitiva para entrenadores de voleibol. Estadísticas en tiempo real, gráficas de rendimiento y seguimiento del progreso de tus equipos.">
+    <meta property="og:description" content="La aplicación definitiva para registrar y analizar estadísticas de voleibol. Gestiona equipos, captura acciones en tiempo real y realiza seguimiento del progreso.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://bluedebug.com/vbstats.html">
     <meta name="robots" content="index, follow">
@@ -264,7 +264,7 @@
 
         @media (min-width: 1024px) {
             .features-grid {
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(4, 1fr);
             }
         }
 
@@ -283,8 +283,15 @@
         }
 
         .feature-icon {
-            font-size: 2.5rem;
+            width: 48px;
+            height: 48px;
             margin-bottom: var(--space-4);
+            color: #FF9800;
+        }
+
+        .feature-icon svg {
+            width: 100%;
+            height: 100%;
         }
 
         .feature-card h3 {
@@ -547,9 +554,9 @@
                     </span>
                     <h1 class="app-title">VBStats</h1>
                     <p class="app-subtitle">
-                        La app definitiva para entrenadores de voleibol. Registra estadísticas de partidos en tiempo real, 
-                        genera gráficas de rendimiento detalladas, realiza seguimiento del progreso de tus equipos y 
-                        comparte informes profesionales con tus jugadores.
+                        La aplicación definitiva para registrar y analizar estadísticas de voleibol. 
+                        Gestiona equipos, captura acciones en tiempo real durante los partidos, 
+                        visualiza métricas detalladas y realiza seguimiento del progreso de tus jugadores.
                     </p>
                     <div class="app-buttons">
                         <a href="#" class="btn-store" target="_blank" rel="noopener">
@@ -666,39 +673,67 @@
 
             <div class="features-grid">
                 <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="feature-icon">📊</div>
-                    <h3>Estadísticas en Tiempo Real</h3>
-                    <p>Registra cada acción del partido mientras ocurre. Saques, recepciones, ataques, bloqueos y más.</p>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12,5.5A3.5,3.5,0,0,1,15.5,9A3.5,3.5,0,0,1,12,12.5A3.5,3.5,0,0,1,8.5,9A3.5,3.5,0,0,1,12,5.5M5,8C5.56,8,6.08,8.15,6.53,8.42C6.38,9.85,6.8,11.27,7.66,12.38C7.16,13.34,6.16,14,5,14A3,3,0,0,1,2,11A3,3,0,0,1,5,8M19,8A3,3,0,0,1,22,11A3,3,0,0,1,19,14C17.84,14,16.84,13.34,16.34,12.38C17.2,11.27,17.62,9.85,17.47,8.42C17.92,8.15,18.44,8,19,8M5.5,18.25C5.5,16.18,8.41,14.5,12,14.5C15.59,14.5,18.5,16.18,18.5,18.25V20H5.5V18.25M0,20V18.5C0,17.11,1.89,15.94,4.45,15.6C3.86,16.28,3.5,17.22,3.5,18.25V20H0M24,20H20.5V18.25C20.5,17.22,20.14,16.28,19.55,15.6C22.11,15.94,24,17.11,24,18.5V20Z"/></svg>
+                    </div>
+                    <h3>Gestión de Equipos</h3>
+                    <p>Crea y administra tus equipos de voleibol. Añade jugadores con nombre, dorsal y posición para gestionar sus estadísticas.</p>
                 </div>
 
                 <div class="feature-card" data-aos="fade-up" data-aos-delay="150">
-                    <div class="feature-icon">📈</div>
-                    <h3>Gráficas de Rendimiento</h3>
-                    <p>Visualiza el progreso de tus jugadores con gráficos intuitivos y métricas detalladas.</p>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6,14A1,1,0,0,1,7,15A1,1,0,0,1,6,16A5,5,0,0,1,1,11A5,5,0,0,1,6,6C6.5,6,6.96,6.06,7.4,6.17L9.81,3.75C10.58,3,12.13,2.56,13.41,2.56C14.68,2.56,15.95,3,16.72,3.75L21.47,8.5C22.57,9.58,22.55,11.18,21.43,12.28L12.28,21.43C11.18,22.55,9.58,22.57,8.5,21.47L3.75,16.72C3,15.95,2.56,14.68,2.56,13.41C2.56,12.13,3,10.58,3.75,9.81L6.17,7.4C6.06,6.96,6,6.5,6,6A5,5,0,0,1,11,1A5,5,0,0,1,16,6A5,5,0,0,1,11,11A1,1,0,0,1,10,10A1,1,0,0,1,11,9A3,3,0,0,0,14,6A3,3,0,0,0,11,3A3,3,0,0,0,8,6C8,6.5,8.13,6.97,8.34,7.38L5.64,10.08C5.24,10.47,5,10.96,5,11.5C5,12.04,5.24,12.53,5.64,12.92L11.08,18.36C11.47,18.76,11.96,19,12.5,19C13.04,19,13.53,18.76,13.92,18.36L18.36,13.92C18.76,13.53,19,13.04,19,12.5C19,11.96,18.76,11.47,18.36,11.08L13.92,6.64C13.53,6.24,13.04,6,12.5,6L10.62,6L8.36,8.26C7.97,8.09,7,8,6,8A3,3,0,0,0,3,11A3,3,0,0,0,6,14Z"/></svg>
+                    </div>
+                    <h3>Partidos en Tiempo Real</h3>
+                    <p>Inicia partidos y registra estadísticas en tiempo real. Configura sets, rival y selecciona titulares para cada encuentro.</p>
                 </div>
 
                 <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="feature-icon">👥</div>
-                    <h3>Gestión de Equipos</h3>
-                    <p>Organiza múltiples equipos, gestiona plantillas y asigna posiciones a cada jugador.</p>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2,0,0,0,5,21H19A2,2,0,0,0,21,19V5C21,3.89,20.1,3,19,3M9,17H7V10H9V17M13,17H11V7H13V17M17,17H15V13H17V17Z"/></svg>
+                    </div>
+                    <h3>Registro de Estadísticas</h3>
+                    <p>Captura cada acción durante el partido: recepción, ataque, bloqueo, saque, defensa y colocación con sus diferentes valoraciones.</p>
                 </div>
 
                 <div class="feature-card" data-aos="fade-up" data-aos-delay="250">
-                    <div class="feature-icon">📱</div>
-                    <h3>Seguimiento del Progreso</h3>
-                    <p>Analiza la evolución individual y colectiva a lo largo de la temporada.</p>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12,8A4,4,0,0,1,16,12A4,4,0,0,1,12,16A4,4,0,0,1,8,12A4,4,0,0,1,12,8M12,10A2,2,0,0,0,10,12A2,2,0,0,0,12,14A2,2,0,0,0,14,12A2,2,0,0,0,12,10M10,22C9.75,22,9.54,21.82,9.5,21.58L9.13,18.93C8.5,18.68,7.96,18.34,7.44,17.94L4.95,18.95C4.73,19.03,4.46,18.95,4.34,18.73L2.34,15.27C2.21,15.05,2.27,14.78,2.46,14.63L4.57,12.97L4.5,12L4.57,11L2.46,9.37C2.27,9.22,2.21,8.95,2.34,8.73L4.34,5.27C4.46,5.05,4.73,4.96,4.95,5.05L7.44,6.05C7.96,5.66,8.5,5.32,9.13,5.07L9.5,2.42C9.54,2.18,9.75,2,10,2H14C14.25,2,14.46,2.18,14.5,2.42L14.87,5.07C15.5,5.32,16.04,5.66,16.56,6.05L19.05,5.05C19.27,4.96,19.54,5.05,19.66,5.27L21.66,8.73C21.79,8.95,21.73,9.22,21.54,9.37L19.43,11L19.5,12L19.43,13L21.54,14.63C21.73,14.78,21.79,15.05,21.66,15.27L19.66,18.73C19.54,18.95,19.27,19.04,19.05,18.95L16.56,17.95C16.04,18.34,15.5,18.68,14.87,18.93L14.5,21.58C14.46,21.82,14.25,22,14,22H10Z"/></svg>
+                    </div>
+                    <h3>Configuración Personalizable</h3>
+                    <p>Personaliza qué estadísticas registrar según tus necesidades. Activa o desactiva acciones y establece configuraciones predeterminadas.</p>
                 </div>
 
                 <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="feature-icon">📤</div>
-                    <h3>Comparte Informes</h3>
-                    <p>Genera y comparte informes profesionales con tus jugadores de forma sencilla.</p>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12,9A3,3,0,0,0,9,12A3,3,0,0,0,12,15A3,3,0,0,0,15,12A3,3,0,0,0,12,9M12,17A5,5,0,0,1,7,12A5,5,0,0,1,12,7A5,5,0,0,1,17,12A5,5,0,0,1,12,17M12,4.5C7,4.5,2.73,7.61,1,12C2.73,16.39,7,19.5,12,19.5C17,19.5,21.27,16.39,23,12C21.27,7.61,17,4.5,12,4.5Z"/></svg>
+                    </div>
+                    <h3>Consulta Estadísticas</h3>
+                    <p>Visualiza estadísticas de partidos con filtros por set y jugador. Navega entre las diferentes métricas de rendimiento.</p>
                 </div>
 
                 <div class="feature-card" data-aos="fade-up" data-aos-delay="350">
-                    <div class="feature-icon">⚙️</div>
-                    <h3>Totalmente Personalizable</h3>
-                    <p>Adapta las categorías de estadísticas y métricas según tu metodología de entrenamiento.</p>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14,2H6A2,2,0,0,0,4,4V20A2,2,0,0,0,6,22H18A2,2,0,0,0,20,20V8L14,2M18,20H6V4H13V9H18V20M12.9,14.5L15.8,19H14L12,15.6L10,19H8.2L11.1,14.5L8.2,10H10L12,13.4L14,10H15.8L12.9,14.5Z"/></svg>
+                    </div>
+                    <h3>Exportar a Excel</h3>
+                    <p>Descarga estadísticas en formato Excel para análisis externo. Comparte informes a través de redes sociales o genera ficheros detallados.</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16,6L18.29,8.29L13.41,13.17L9.41,9.17L2,16.59L3.41,18L9.41,12L13.41,16L19.71,9.71L22,12V6H16Z"/></svg>
+                    </div>
+                    <h3>Seguimiento de Progreso</h3>
+                    <p>Visualiza la evolución de tu equipo con gráficos de línea, barras o dispersión. Analiza tendencias y patrones de rendimiento.</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="450">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4,4H20A2,2,0,0,1,22,6V18A2,2,0,0,1,20,20H4A2,2,0,0,1,2,18V6A2,2,0,0,1,4,4M4,6V18H11V6H4M20,18V6H18V18H20M13,6V18H16V6H13M7,9H9V15H7V9Z"/></svg>
+                    </div>
+                    <h3>Marcador</h3>
+                    <p>Usa el marcador para seguir el resultado sin recoger estadísticas. Gestiona automáticamente los sets y puntos del partido.</p>
                 </div>
             </div>
         </div>
@@ -716,42 +751,42 @@
                 <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
                     <h3 class="pricing-name">Gratis</h3>
                     <div class="pricing-price">0€<span>/mes</span></div>
-                    <p class="pricing-description">Perfecto para empezar</p>
+                    <p class="pricing-description">Perfecto para espectadores</p>
                     <ul class="pricing-features">
-                        <li>1 equipo</li>
-                        <li>Estadísticas básicas</li>
-                        <li>Historial de partidos limitado</li>
-                        <li class="disabled">Gráficas avanzadas</li>
-                        <li class="disabled">Exportar informes</li>
-                        <li class="disabled">Sincronización cloud</li>
+                        <li>Buscar partido por código</li>
+                        <li>Marcador básico</li>
+                        <li class="disabled">Crear equipos</li>
+                        <li class="disabled">Registrar estadísticas</li>
+                        <li class="disabled">Ver estadísticas de partido</li>
+                        <li class="disabled">Exportar datos</li>
                     </ul>
                 </div>
 
                 <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="pricing-name">Básica</h3>
+                    <h3 class="pricing-name">Básico</h3>
                     <div class="pricing-price">4,99€<span>/mes</span></div>
                     <p class="pricing-description">Para entrenadores comprometidos</p>
                     <ul class="pricing-features">
-                        <li>Hasta 3 equipos</li>
-                        <li>Estadísticas completas</li>
-                        <li>Historial ilimitado</li>
-                        <li>Gráficas de rendimiento</li>
-                        <li>Exportar informes PDF</li>
-                        <li class="disabled">Sincronización cloud</li>
+                        <li>Hasta 2 equipos</li>
+                        <li>Jugadores ilimitados por equipo</li>
+                        <li>Partidos guardados ilimitados</li>
+                        <li>Configuración estadísticas básica</li>
+                        <li>Filtrar por set y jugador</li>
+                        <li class="disabled">Estadísticas avanzadas</li>
                     </ul>
                 </div>
 
                 <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
                     <h3 class="pricing-name">PRO</h3>
                     <div class="pricing-price">9,99€<span>/mes</span></div>
-                    <p class="pricing-description">Para profesionales exigentes</p>
+                    <p class="pricing-description">Sin límites para profesionales</p>
                     <ul class="pricing-features">
                         <li>Equipos ilimitados</li>
-                        <li>Todas las estadísticas</li>
-                        <li>Historial ilimitado</li>
-                        <li>Gráficas avanzadas</li>
-                        <li>Exportar en múltiples formatos</li>
-                        <li>Sincronización cloud</li>
+                        <li>Estadísticas avanzadas completas</li>
+                        <li>Defensa y colocación incluidas</li>
+                        <li>Exportar a Excel</li>
+                        <li>Seguimiento del equipo</li>
+                        <li>Gráficos de tendencias</li>
                     </ul>
                 </div>
             </div>
@@ -761,8 +796,9 @@
                 <p>Las suscripciones se renuevan automáticamente al final de cada período de facturación mensual, a menos que se cancelen al menos 24 horas antes del final del período actual.</p>
                 <p>El pago se cargará a tu cuenta de iTunes/Google Play en la confirmación de la compra. Puedes gestionar y cancelar tus suscripciones accediendo a la configuración de tu cuenta en la App Store o Google Play Store.</p>
                 <ul>
-                    <li><strong>Suscripción Básica:</strong> 4,99€/mes - Acceso a funciones avanzadas de estadísticas y hasta 3 equipos</li>
-                    <li><strong>Suscripción PRO:</strong> 9,99€/mes - Acceso completo a todas las funciones, equipos ilimitados y sincronización cloud</li>
+                    <li><strong>Plan Gratis:</strong> 0€/mes - Busca partidos por código compartido y usa el marcador básico para seguir el resultado</li>
+                    <li><strong>Suscripción Básico:</strong> 4,99€/mes - Crea hasta 2 equipos, registra estadísticas básicas y guarda partidos ilimitados</li>
+                    <li><strong>Suscripción PRO:</strong> 9,99€/mes - Sin límites en equipos, estadísticas avanzadas completas, exportación a Excel y seguimiento del equipo</li>
                 </ul>
                 <p style="margin-top: var(--space-6);">
                     Al suscribirte, aceptas nuestros <a href="vbstats-terminos.html">Términos de Uso</a> y nuestra <a href="vbstats-privacidad.html">Política de Privacidad</a>.
