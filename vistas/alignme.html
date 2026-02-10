@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="VBStats - App móvil para registrar y analizar estadísticas de voleibol. Gestiona equipos, captura acciones en tiempo real, consulta métricas detalladas y realiza seguimiento del progreso de tus jugadores.">
-    <meta name="keywords" content="VBStats, app voleibol, estadísticas voleibol, registro partidos, análisis rendimiento, recepción, ataque, bloqueo, saque, BlueDeBug">
+    <meta name="description" content="AlignMe - App para árbitros de voleibol. Crea rotaciones de partidos y compártelas mediante código QR. Utilizada por la Federación Asturiana y Balear.">
+    <meta name="keywords" content="AlignMe, app árbitros, árbitros voleibol, rotaciones voleibol, QR, federación asturiana, federación balear, BlueDeBug">
     <meta name="author" content="BlueDeBug">
-    <meta property="og:title" content="VBStats - App de Estadísticas de Voleibol | BlueDeBug">
-    <meta property="og:description" content="La aplicación definitiva para registrar y analizar estadísticas de voleibol. Gestiona equipos, captura acciones en tiempo real y realiza seguimiento del progreso.">
+    <meta property="og:title" content="AlignMe - App de Rotaciones para Árbitros | BlueDeBug">
+    <meta property="og:description" content="Crea y comparte rotaciones de voleibol con código QR. Utilizada por las Federaciones Asturiana y Balear. Más de 2.000 descargas.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://bluedebug.com/vbstats.html">
+    <meta property="og:url" content="https://bluedebug.com/alignme.html">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://bluedebug.com/vbstats.html">
-    <title>VBStats - App de Estadísticas de Voleibol | BlueDeBug</title>
+    <link rel="canonical" href="https://bluedebug.com/alignme.html">
+    <title>AlignMe - App de Rotaciones para Árbitros | BlueDeBug</title>
     <link rel="icon" type="image/svg+xml" href="../assets/logo.svg">
     <link rel="stylesheet" href="../estilos/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        /* VBStats App Specific Styles */
+        /* AlignMe App Specific Styles */
         .app-hero {
             padding: 160px 0 100px;
             background: linear-gradient(135deg, #0A0E27 0%, #0F1730 50%, #0A0E27 100%);
@@ -34,7 +34,7 @@
             right: -20%;
             width: 800px;
             height: 800px;
-            background: radial-gradient(circle, rgba(255, 152, 0, 0.15) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(76, 175, 80, 0.15) 0%, transparent 70%);
             border-radius: 50%;
             animation: pulse 8s ease-in-out infinite;
         }
@@ -46,7 +46,7 @@
             left: -15%;
             width: 600px;
             height: 600px;
-            background: radial-gradient(circle, rgba(255, 152, 0, 0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(76, 175, 80, 0.1) 0%, transparent 70%);
             border-radius: 50%;
             animation: pulse 10s ease-in-out infinite 2s;
         }
@@ -87,11 +87,11 @@
             align-items: center;
             gap: var(--space-2);
             padding: var(--space-2) var(--space-4);
-            background: rgba(255, 152, 0, 0.1);
-            border: 1px solid rgba(255, 152, 0, 0.3);
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid rgba(76, 175, 80, 0.3);
             border-radius: var(--radius-full);
             font-size: var(--text-sm);
-            color: #FF9800;
+            color: #4CAF50;
             margin-bottom: var(--space-6);
         }
 
@@ -101,7 +101,7 @@
             line-height: 1.1;
             letter-spacing: -0.03em;
             margin-bottom: var(--space-6);
-            background: linear-gradient(135deg, #ffffff 0%, #FF9800 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #4CAF50 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -112,6 +112,39 @@
             color: #CBD5E1;
             margin-bottom: var(--space-8);
             line-height: 1.8;
+        }
+
+        .app-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-6);
+            margin-bottom: var(--space-8);
+            justify-content: center;
+        }
+
+        @media (min-width: 1024px) {
+            .app-stats {
+                justify-content: flex-start;
+            }
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: var(--space-4) var(--space-6);
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid rgba(76, 175, 80, 0.2);
+            border-radius: var(--radius-lg);
+        }
+
+        .stat-number {
+            font-size: var(--text-2xl);
+            font-weight: 800;
+            color: #4CAF50;
+        }
+
+        .stat-label {
+            font-size: var(--text-sm);
+            color: var(--color-text-tertiary);
         }
 
         .app-buttons {
@@ -125,6 +158,32 @@
             .app-buttons {
                 justify-content: flex-start;
             }
+        }
+
+        .btn-contact-app {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-3);
+            padding: var(--space-4) var(--space-8);
+            background: linear-gradient(135deg, #4CAF50 0%, #388E3C 100%);
+            border: none;
+            border-radius: var(--radius-lg);
+            color: white;
+            font-weight: 600;
+            font-size: var(--text-base);
+            transition: all var(--transition);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .btn-contact-app:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(76, 175, 80, 0.4);
+        }
+
+        .btn-contact-app svg {
+            width: 20px;
+            height: 20px;
         }
 
         .btn-store {
@@ -143,7 +202,7 @@
         .btn-store:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            border-color: rgba(255, 152, 0, 0.3);
+            border-color: rgba(76, 175, 80, 0.3);
         }
 
         .btn-store svg {
@@ -202,8 +261,8 @@
 
         .screenshot-item:hover {
             transform: scale(1.05);
-            border-color: rgba(255, 152, 0, 0.5);
-            box-shadow: 0 25px 70px rgba(255, 152, 0, 0.2);
+            border-color: rgba(76, 175, 80, 0.5);
+            box-shadow: 0 25px 70px rgba(76, 175, 80, 0.2);
         }
 
         .screenshot-item img {
@@ -223,9 +282,9 @@
             width: 48px;
             height: 48px;
             border-radius: 50%;
-            background: rgba(255, 152, 0, 0.1);
-            border: 1px solid rgba(255, 152, 0, 0.3);
-            color: #FF9800;
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid rgba(76, 175, 80, 0.3);
+            color: #4CAF50;
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -234,7 +293,7 @@
         }
 
         .carousel-btn:hover {
-            background: rgba(255, 152, 0, 0.2);
+            background: rgba(76, 175, 80, 0.2);
             transform: scale(1.1);
         }
 
@@ -270,23 +329,23 @@
 
         .feature-card {
             padding: var(--space-8);
-            background: linear-gradient(135deg, rgba(255, 152, 0, 0.08) 0%, rgba(255, 152, 0, 0.02) 100%);
-            border: 2px solid rgba(255, 152, 0, 0.15);
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.08) 0%, rgba(76, 175, 80, 0.02) 100%);
+            border: 2px solid rgba(76, 175, 80, 0.15);
             border-radius: var(--radius-xl);
             transition: all var(--transition-slow);
         }
 
         .feature-card:hover {
-            border-color: rgba(255, 152, 0, 0.4);
+            border-color: rgba(76, 175, 80, 0.4);
             transform: translateY(-8px);
-            box-shadow: 0 20px 60px rgba(255, 152, 0, 0.15);
+            box-shadow: 0 20px 60px rgba(76, 175, 80, 0.15);
         }
 
         .feature-icon {
             width: 48px;
             height: 48px;
             margin-bottom: var(--space-4);
-            color: #FF9800;
+            color: #4CAF50;
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -308,146 +367,96 @@
             line-height: 1.7;
         }
 
-        /* Pricing Section */
-        .app-pricing {
+        /* Federation Section */
+        .federations-section {
             padding: var(--space-24) 0;
             background: linear-gradient(135deg, #0A0E27 0%, #0F1730 100%);
         }
 
-        .pricing-grid {
+        .federations-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: var(--space-8);
             margin-top: var(--space-12);
-            max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         @media (min-width: 768px) {
-            .pricing-grid {
-                grid-template-columns: repeat(3, 1fr);
+            .federations-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
-        .pricing-card {
+        .federation-card {
             padding: var(--space-10);
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
             border: 2px solid rgba(255, 255, 255, 0.1);
             border-radius: var(--radius-xl);
             text-align: center;
             transition: all var(--transition-slow);
-            position: relative;
         }
 
-        .pricing-card.featured {
-            border-color: rgba(255, 152, 0, 0.5);
-            background: linear-gradient(135deg, rgba(255, 152, 0, 0.1) 0%, rgba(255, 152, 0, 0.03) 100%);
-            transform: scale(1.05);
+        .federation-card:hover {
+            border-color: rgba(76, 175, 80, 0.4);
+            transform: translateY(-8px);
         }
 
-        .pricing-card.featured::before {
-            content: 'Popular';
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: var(--space-1) var(--space-4);
-            background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%);
-            border-radius: var(--radius-full);
-            font-size: var(--text-xs);
-            font-weight: 600;
-            color: #000;
-        }
-
-        .pricing-card:hover {
-            transform: translateY(-10px);
-            border-color: rgba(255, 152, 0, 0.4);
-        }
-
-        .pricing-card.featured:hover {
-            transform: scale(1.05) translateY(-10px);
-        }
-
-        .pricing-name {
-            font-size: var(--text-2xl);
-            font-weight: 700;
-            margin-bottom: var(--space-2);
-        }
-
-        .pricing-price {
-            font-size: var(--text-4xl);
-            font-weight: 800;
-            color: #FF9800;
-            margin-bottom: var(--space-2);
-        }
-
-        .pricing-price span {
-            font-size: var(--text-lg);
-            font-weight: 400;
-            color: var(--color-text-tertiary);
-        }
-
-        .pricing-description {
-            color: var(--color-text-tertiary);
-            margin-bottom: var(--space-6);
-            font-size: var(--text-sm);
-        }
-
-        .pricing-features {
-            list-style: none;
-            margin-bottom: var(--space-8);
-            text-align: left;
-        }
-
-        .pricing-features li {
-            padding: var(--space-3) 0;
-            color: var(--color-text-secondary);
+        .federation-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto var(--space-6);
+            background: rgba(76, 175, 80, 0.1);
+            border-radius: 50%;
             display: flex;
             align-items: center;
-            gap: var(--space-3);
-            font-size: var(--text-sm);
-        }
-
-        .pricing-features li::before {
-            content: '✓';
-            color: #4CAF50;
-            font-weight: 700;
-        }
-
-        .pricing-features li.disabled {
-            color: var(--color-text-tertiary);
-            opacity: 0.5;
-        }
-
-        .pricing-features li.disabled::before {
-            content: '✗';
-            color: #EF5350;
-        }
-
-        /* Legal Links */
-        .app-legal {
-            padding: var(--space-16) 0;
-            background: var(--color-bg);
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .legal-links {
-            display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            gap: var(--space-6);
+            color: #4CAF50;
         }
 
-        .legal-link {
+        .federation-icon svg {
+            width: 40px;
+            height: 40px;
+        }
+
+        .federation-name {
+            font-size: var(--text-xl);
+            font-weight: 700;
+            margin-bottom: var(--space-3);
+        }
+
+        .federation-description {
+            color: var(--color-text-tertiary);
+            line-height: 1.7;
+        }
+
+        /* Contact CTA Section */
+        .contact-cta {
+            padding: var(--space-24) 0;
+            background: var(--color-bg);
+        }
+
+        .cta-card {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--space-12);
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.1) 0%, rgba(76, 175, 80, 0.03) 100%);
+            border: 2px solid rgba(76, 175, 80, 0.3);
+            border-radius: var(--radius-2xl);
+            text-align: center;
+        }
+
+        .cta-card h2 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: var(--space-4);
+        }
+
+        .cta-card p {
             color: var(--color-text-secondary);
-            text-decoration: none;
-            transition: color var(--transition);
-            font-size: var(--text-sm);
-        }
-
-        .legal-link:hover {
-            color: #FF9800;
+            font-size: var(--text-lg);
+            margin-bottom: var(--space-8);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* Section Header */
@@ -466,58 +475,6 @@
         .section-header-app p {
             color: var(--color-text-secondary);
             font-size: var(--text-lg);
-        }
-
-        /* Subscription Info */
-        .subscription-info {
-            margin-top: var(--space-12);
-            padding: var(--space-8);
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: var(--radius-lg);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .subscription-info h3 {
-            font-size: var(--text-lg);
-            font-weight: 600;
-            margin-bottom: var(--space-4);
-            color: var(--color-text);
-        }
-
-        .subscription-info p {
-            color: var(--color-text-secondary);
-            font-size: var(--text-sm);
-            line-height: 1.8;
-            margin-bottom: var(--space-3);
-        }
-
-        .subscription-info ul {
-            list-style: none;
-            margin-top: var(--space-4);
-        }
-
-        .subscription-info li {
-            color: var(--color-text-secondary);
-            font-size: var(--text-sm);
-            padding: var(--space-2) 0;
-            padding-left: var(--space-5);
-            position: relative;
-        }
-
-        .subscription-info li::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: #FF9800;
-        }
-
-        .subscription-info a {
-            color: #FF9800;
-            text-decoration: none;
-        }
-
-        .subscription-info a:hover {
-            text-decoration: underline;
         }
     </style>
 </head>
@@ -551,17 +508,35 @@
                 <div class="app-info" data-aos="fade-up">
                     <span class="app-badge">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
                         </svg>
-                        App para Entrenadores
+                        App Oficial para Árbitros
                     </span>
-                    <h1 class="app-title">VBStats</h1>
+                    <h1 class="app-title">AlignMe</h1>
                     <p class="app-subtitle">
-                        La aplicación definitiva para registrar y analizar estadísticas de voleibol. 
-                        Gestiona equipos, captura acciones en tiempo real durante los partidos, 
-                        visualiza métricas detalladas y realiza seguimiento del progreso de tus jugadores.
+                        La aplicación para árbitros de voleibol. Utilizada oficialmente por 
+                        la Federación Asturiana y la Federación Balear de Voleibol para crear 
+                        y compartir rotaciones de partidos de forma rápida y sencilla.
                     </p>
+                    
+                    <div class="app-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">+2.000</div>
+                            <div class="stat-label">Descargas</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Federaciones</div>
+                        </div>
+                    </div>
+
                     <div class="app-buttons">
+                        <a href="../index.html#contacto" class="btn-contact-app">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                            Solicitar Presupuesto
+                        </a>
                         <a href="#" class="btn-store" target="_blank" rel="noopener">
                             <svg viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
@@ -586,52 +561,19 @@
                 <div class="screenshots-wrapper" data-aos="fade-left" data-aos-delay="200">
                     <div class="screenshots-carousel" id="screenshotsCarousel">
                         <div class="screenshot-item">
-                            <img src="../assets/capts_vbstats/Simulator Screenshot - iPhone 11 Pro Max - 2026-02-02 at 16.51.14.png" alt="VBStats Screenshot 1">
+                            <img src="../assets/capts_alignme/WhatsApp Image 2026-02-10 at 19.26.02.jpeg" alt="AlignMe Screenshot 1">
                         </div>
                         <div class="screenshot-item">
-                            <img src="../assets/capts_vbstats/Simulator Screenshot - iPhone 11 Pro Max - 2026-02-03 at 10.15.33.png" alt="VBStats Screenshot 2">
+                            <img src="../assets/capts_alignme/WhatsApp Image 2026-02-10 at 19.26.02 (1).jpeg" alt="AlignMe Screenshot 2">
                         </div>
                         <div class="screenshot-item">
-                            <img src="../assets/capts_vbstats/Simulator Screenshot - iPhone 11 Pro Max - 2026-02-03 at 10.15.39.png" alt="VBStats Screenshot 3">
+                            <img src="../assets/capts_alignme/WhatsApp Image 2026-02-10 at 19.26.02 (2).jpeg" alt="AlignMe Screenshot 3">
                         </div>
                         <div class="screenshot-item">
-                            <img src="../assets/capts_vbstats/Simulator Screenshot - iPhone 11 Pro Max - 2026-02-03 at 10.15.47.png" alt="VBStats Screenshot 4">
+                            <img src="../assets/capts_alignme/WhatsApp Image 2026-02-10 at 19.26.02 (3).jpeg" alt="AlignMe Screenshot 4">
                         </div>
                         <div class="screenshot-item">
-                            <img src="../assets/capts_vbstats/Simulator Screenshot - iPhone 11 Pro Max - 2026-02-03 at 10.15.54.png" alt="VBStats Screenshot 5">
-                        </div>
-                        <div class="screenshot-item">
-                            <img src="../assets/capts_vbstats/Simulator Screenshot - iPhone 11 Pro Max - 2026-02-03 at 10.16.07.png" alt="VBStats Screenshot 6">
-                        </div>
-                        <div class="screenshot-item">
-                            <img src="../assets/capts_vbstats/Simulator Screenshot - iPhone 11 Pro Max - 2026-02-03 at 10.17.24.png" alt="VBStats Screenshot 7">
-                        </div>
-                        <div class="screenshot-item">
-                            <img src="../assets/capts_vbstats/Simulator Screenshot - iPhone 11 Pro Max - 2026-02-03 at 10.17.30.png" alt="VBStats Screenshot 8">
-                        </div>
-                        <div class="screenshot-item">
-                            <img src="../assets/capts_vbstats/Simulator Screenshot - iPhone 11 Pro Max - 2026-02-03 at 10.18.36.png" alt="VBStats Screenshot 9">
-                        </div>
-                        <div class="screenshot-item">
-                            <img src="../assets/capts_vbstats/Simulator Screenshot - iPhone 11 Pro Max - 2026-02-03 at 10.18.41.png" alt="VBStats Screenshot 10">
-                        </div>
-                        <div class="screenshot-item">
-                            <img src="../assets/capts_vbstats/Simulator Screenshot - iPhone 11 Pro Max - 2026-02-03 at 10.18.58.png" alt="VBStats Screenshot 11">
-                        </div>
-                        <div class="screenshot-item">
-                            <img src="../assets/capts_vbstats/Simulator Screenshot - iPhone 11 Pro Max - 2026-02-03 at 10.19.21.png" alt="VBStats Screenshot 12">
-                        </div>
-                        <div class="screenshot-item">
-                            <img src="../assets/capts_vbstats/Simulator Screenshot - iPhone 11 Pro Max - 2026-02-03 at 10.19.28.png" alt="VBStats Screenshot 13">
-                        </div>
-                        <div class="screenshot-item">
-                            <img src="../assets/capts_vbstats/Simulator Screenshot - iPhone 11 Pro Max - 2026-02-03 at 10.19.35.png" alt="VBStats Screenshot 14">
-                        </div>
-                        <div class="screenshot-item">
-                            <img src="../assets/capts_vbstats/Simulator Screenshot - iPhone 11 Pro Max - 2026-02-03 at 10.19.42.png" alt="VBStats Screenshot 15">
-                        </div>
-                        <div class="screenshot-item">
-                            <img src="../assets/capts_vbstats/Simulator Screenshot - iPhone 11 Pro Max - 2026-02-03 at 11.10.56.png" alt="VBStats Screenshot 16">
+                            <img src="../assets/capts_alignme/WhatsApp Image 2026-02-10 at 19.26.03.jpeg" alt="AlignMe Screenshot 5">
                         </div>
                     </div>
                     <div class="carousel-controls">
@@ -655,137 +597,89 @@
     <section class="app-features">
         <div class="container">
             <div class="section-header-app" data-aos="fade-up">
-                <h2>Todo lo que necesitas para entrenar mejor</h2>
-                <p>Herramientas profesionales diseñadas específicamente para entrenadores de voleibol</p>
+                <h2>Simple y efectivo</h2>
+                <p>Todo lo que necesitas para gestionar rotaciones de voleibol</p>
             </div>
 
-            <div class="features-grid">
+            <div class="features-grid" style="max-width: 900px; margin: var(--space-12) auto 0; grid-template-columns: repeat(3, 1fr);">
                 <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="feature-icon"><i data-lucide="users"></i></div>
-                    <h3>Gestión de Equipos</h3>
-                    <p>Crea y administra tus equipos de voleibol. Añade jugadores con nombre, dorsal y posición para gestionar sus estadísticas.</p>
+                    <div class="feature-icon"><i data-lucide="rotate-cw"></i></div>
+                    <h3>Crear Rotaciones</h3>
+                    <p>Crea rotaciones de partido de forma rápida e intuitiva. Configura las posiciones de los jugadores para cada set.</p>
                 </div>
 
                 <div class="feature-card" data-aos="fade-up" data-aos-delay="150">
-                    <div class="feature-icon"><i data-lucide="activity"></i></div>
-                    <h3>Partidos en Tiempo Real</h3>
-                    <p>Inicia partidos y registra estadísticas en tiempo real. Configura sets, rival y selecciona titulares para cada encuentro.</p>
+                    <div class="feature-icon"><i data-lucide="qr-code"></i></div>
+                    <h3>Compartir con QR</h3>
+                    <p>Genera un código QR para compartir las rotaciones con otros árbitros o entrenadores al instante.</p>
                 </div>
 
                 <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="feature-icon"><i data-lucide="list-checks"></i></div>
-                    <h3>Registro de Estadísticas</h3>
-                    <p>Captura cada acción durante el partido: recepción, ataque, bloqueo, saque, defensa y colocación con sus diferentes valoraciones.</p>
-                </div>
-
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="250">
-                    <div class="feature-icon"><i data-lucide="sliders"></i></div>
-                    <h3>Configuración Personalizable</h3>
-                    <p>Personaliza qué estadísticas registrar según tus necesidades. Activa o desactiva acciones y establece configuraciones predeterminadas.</p>
-                </div>
-
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="feature-icon"><i data-lucide="bar-chart-3"></i></div>
-                    <h3>Consulta Estadísticas</h3>
-                    <p>Visualiza estadísticas de partidos con filtros por set y jugador. Navega entre las diferentes métricas de rendimiento.</p>
-                </div>
-
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="350">
-                    <div class="feature-icon"><i data-lucide="file-spreadsheet"></i></div>
-                    <h3>Exportar a Excel</h3>
-                    <p>Descarga estadísticas en formato Excel para análisis externo. Comparte informes a través de redes sociales o genera ficheros detallados.</p>
-                </div>
-
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="feature-icon"><i data-lucide="trending-up"></i></div>
-                    <h3>Seguimiento de Progreso</h3>
-                    <p>Visualiza la evolución de tu equipo con gráficos de línea, barras o dispersión. Analiza tendencias y patrones de rendimiento.</p>
-                </div>
-
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="450">
-                    <div class="feature-icon"><i data-lucide="trophy"></i></div>
-                    <h3>Marcador</h3>
-                    <p>Usa el marcador para seguir el resultado sin recoger estadísticas. Gestiona automáticamente los sets y puntos del partido.</p>
+                    <div class="feature-icon"><i data-lucide="eye"></i></div>
+                    <h3>Visualizar Rotaciones</h3>
+                    <p>Escanea el QR y visualiza las rotaciones de forma clara y ordenada durante el partido.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section class="app-pricing">
+    <!-- Federations Section -->
+    <section class="federations-section">
         <div class="container">
             <div class="section-header-app" data-aos="fade-up">
-                <h2>Planes y Precios</h2>
-                <p>Elige el plan que mejor se adapte a tus necesidades</p>
+                <h2>Federaciones que confían en nosotros</h2>
+                <p>AlignMe es la herramienta oficial de arbitraje para estas federaciones</p>
             </div>
 
-            <div class="pricing-grid">
-                <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="pricing-name">Gratis</h3>
-                    <div class="pricing-price">0€<span>/mes</span></div>
-                    <p class="pricing-description">Perfecto para espectadores</p>
-                    <ul class="pricing-features">
-                        <li>Buscar partido por código</li>
-                        <li>Marcador básico</li>
-                        <li class="disabled">Crear equipos</li>
-                        <li class="disabled">Registrar estadísticas</li>
-                        <li class="disabled">Ver estadísticas de partido</li>
-                        <li class="disabled">Exportar datos</li>
-                    </ul>
+            <div class="federations-grid">
+                <div class="federation-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="federation-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                            <path d="M2 12h20"/>
+                        </svg>
+                    </div>
+                    <h3 class="federation-name">Federación Asturiana de Voleibol</h3>
+                    <p class="federation-description">
+                        Gestión completa de árbitros para todas las competiciones de voleibol 
+                        en el Principado de Asturias.
+                    </p>
                 </div>
 
-                <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="pricing-name">Básico</h3>
-                    <div class="pricing-price">4,99€<span>/mes</span></div>
-                    <p class="pricing-description">Para entrenadores comprometidos</p>
-                    <ul class="pricing-features">
-                        <li>Hasta 2 equipos</li>
-                        <li>Jugadores ilimitados por equipo</li>
-                        <li>Partidos guardados ilimitados</li>
-                        <li>Configuración estadísticas básica</li>
-                        <li>Filtrar por set y jugador</li>
-                        <li class="disabled">Estadísticas avanzadas</li>
-                    </ul>
+                <div class="federation-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="federation-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                            <path d="M2 12h20"/>
+                        </svg>
+                    </div>
+                    <h3 class="federation-name">Federación Balear de Voleibol</h3>
+                    <p class="federation-description">
+                        Sistema oficial de gestión arbitral para las Islas Baleares, 
+                        cubriendo todas las categorías y competiciones.
+                    </p>
                 </div>
-
-                <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
-                    <h3 class="pricing-name">PRO</h3>
-                    <div class="pricing-price">9,99€<span>/mes</span></div>
-                    <p class="pricing-description">Sin límites para profesionales</p>
-                    <ul class="pricing-features">
-                        <li>Equipos ilimitados</li>
-                        <li>Estadísticas avanzadas completas</li>
-                        <li>Defensa y colocación incluidas</li>
-                        <li>Exportar a Excel</li>
-                        <li>Seguimiento del equipo</li>
-                        <li>Gráficos de tendencias</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="subscription-info" data-aos="fade-up">
-                <h3>Información sobre las suscripciones</h3>
-                <p>Las suscripciones se renuevan automáticamente al final de cada período de facturación mensual, a menos que se cancelen al menos 24 horas antes del final del período actual.</p>
-                <p>El pago se cargará a tu cuenta de iTunes/Google Play en la confirmación de la compra. Puedes gestionar y cancelar tus suscripciones accediendo a la configuración de tu cuenta en la App Store o Google Play Store.</p>
-                <ul>
-                    <li><strong>Plan Gratis:</strong> 0€/mes - Busca partidos por código compartido y usa el marcador básico para seguir el resultado</li>
-                    <li><strong>Suscripción Básico:</strong> 4,99€/mes - Crea hasta 2 equipos, registra estadísticas básicas y guarda partidos ilimitados</li>
-                    <li><strong>Suscripción PRO:</strong> 9,99€/mes - Sin límites en equipos, estadísticas avanzadas completas, exportación a Excel y seguimiento del equipo</li>
-                </ul>
-                <p style="margin-top: var(--space-6);">
-                    Al suscribirte, aceptas nuestros <a href="vbstats-terminos.html">Términos de Uso</a> y nuestra <a href="vbstats-privacidad.html">Política de Privacidad</a>.
-                </p>
             </div>
         </div>
     </section>
 
-    <!-- Legal Links Section -->
-    <section class="app-legal">
+    <!-- Contact CTA Section -->
+    <section class="contact-cta">
         <div class="container">
-            <div class="legal-links">
-                <a href="vbstats-privacidad.html" class="legal-link">Política de Privacidad</a>
-                <a href="vbstats-terminos.html" class="legal-link">Términos de Uso (EULA)</a>
-                <a href="mailto:bluedebug.contact@gmail.com" class="legal-link">Soporte: bluedebug.contact@gmail.com</a>
+            <div class="cta-card" data-aos="fade-up">
+                <h2>¿Tu federación necesita AlignMe?</h2>
+                <p>
+                    Contacta con nosotros para obtener un presupuesto personalizado. 
+                    Adaptamos la aplicación a las necesidades específicas de tu federación.
+                </p>
+                <a href="../index.html#contacto" class="btn-contact-app">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                    </svg>
+                    Solicitar Presupuesto
+                </a>
             </div>
         </div>
     </section>
